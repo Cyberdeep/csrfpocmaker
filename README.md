@@ -14,7 +14,7 @@ Usage: py csrfpocmaker.py
 Features:
 
 1.Supports infinite parameters.
-2.Multiple HTTP Methods Suppoted(GET , POST , PUT)
+2.Multiple HTTP Methods Supported(GET , POST , PUT)
 3.Automatically creates a CSRF exploit.
 4.Exploits are auto-submitted once opened.
 5.Saves output to .html file.
