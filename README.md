@@ -9,7 +9,7 @@ This is a tool specially designed for Pentesters  & Security Researchers to help
 Instructions:
 Go through the program to create the final exploit, once the exploit is created, save it as .html and run it.We added javascript in the end of the exploit so whenever the .html opens the exploit will run automatically(Without user interaction).
 
-Usage: py CSRFmaker.py
+Usage: py csrfpocmaker.py
 
 Features:
 
