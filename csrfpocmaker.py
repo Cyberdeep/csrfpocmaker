@@ -184,7 +184,7 @@ if method == "3": #PUT(JSON)
 		finalstring = dict(zip(num_array, name_array))
 		print exploittitle
 		print formstart
-		print("\tx.send(JSON.stringify({" + str(finalstring) +"}));")
+		print("\tx.send(JSON.stringify(" + str(finalstring) +"));")
 		print formend
 
 		print("Enter your Filename,\nNote: The exploit will be saved as 'filename'.html \n")
@@ -195,7 +195,7 @@ if method == "3": #PUT(JSON)
 
 		file.write(formstart)
 		file.write("\n")
-		file.write('{0}\n'.format("\tx.send(JSON.stringify({", finalstring , "\"}));"))
+		file.write('{0}\n'.format("\tx.send(JSON.stringify(", finalstring , "\"));"))
 		file.write(formend)
 		file.close()
 		print("Your exploit is saved as %s")%filename
