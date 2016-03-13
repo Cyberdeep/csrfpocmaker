@@ -63,7 +63,7 @@ print ("[+] Select method:") #Printing options for HTTP methods
 print ("")
 print ("1.POST")
 print ("2.GET")
-print ("other options will be added soon.
+print ("other options will be added soon.")
 print ("")
 method = str(raw_input("[+] Select 1 or 2 : "))
 print ("")
