@@ -3,6 +3,10 @@ Author: Shawar Khan
 
 Site: http://www.shawarkhan.com
 
+Python Version required: 2.7.11
+
+Compatibility: Windows , Linux or any device running python 2.7
+
 Information:
 This is a tool specially designed for Pentesters  & Security Researchers to help them create Proof Of Concept(POC) of Cross-Site Request Forgery(CSRF) attacks. This tool provides a final exploit for triggering the CSRF attack.                     
 
