@@ -84,7 +84,7 @@ if method == "1": #POST Method
 
 
 		print("")
-		print 'Enter parameter "Name" and "Value": '
+		print ("Enter parameter 'Name' and 'Value': ")
 		for i in range(int(num)): #FOR loop for asking Parameter Name and Value.
 			print("")
 			n = raw_input("Name : ")
@@ -123,7 +123,7 @@ if method == "2": #GET Method
 		num_array = list()
 		name_array = list()
 		print("")
-		print 'Enter parameter "Name" and "Value": '
+		print ("Enter parameter 'Name' and 'Value': ")
 		for i in range(int(num)): #FOR loop for asking Parameter Name and Value.
 			print("")
 			n = raw_input("Name : ")
