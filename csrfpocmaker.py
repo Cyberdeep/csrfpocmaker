@@ -37,9 +37,7 @@ canvas.pack()
 
 root.after(5000, root.destroy)
 root.mainloop()
-import os
-os.system('cls')
-os.system('title CSRF POC Maker by Shawar Khan')
+
 print(" +----------------------------------------------------------------+")
 print(" |   ___ ___ ___ ___   ___  ___   ___   __  __      _             |")
 print(" |  / __/ __| _ \ __| | _ \/ _ \ / __| |  \/  |__ _| |_____ _ _   |")
